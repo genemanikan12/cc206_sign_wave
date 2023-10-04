@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cc206_sign_wave/features/exercise_page.dart';
 
 void main() {
   runApp(const MainApp());
