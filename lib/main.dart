@@ -17,7 +17,7 @@ class MainApp extends StatelessWidget {
             ColorScheme.fromSeed(seedColor: Color.fromARGB(115, 31, 31, 31)),
         useMaterial3: true,
       ),
-      home: const exercise(),
+      home: exercise(),
     );
   }
 }
