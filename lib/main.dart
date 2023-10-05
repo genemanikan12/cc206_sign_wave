@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:cc206_sign_wave/features/sms.dart';
 void main() {
   runApp(const MainApp());
 }
@@ -10,24 +10,9 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
+      title: 'Flutter Demo',
+
+      home: const sms(),
+      );
   }
 }
-//haha
-//fuckasdaasd
-//nbjaccn
-//abc
-
-//eeee
-
-//rrrrrrr
-
-
-//omsimmmm
-//omsim123
-//haha tite
