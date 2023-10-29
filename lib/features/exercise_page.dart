@@ -157,11 +157,11 @@ class _ExerciseState extends State<Exercise> {
                     },
                     child: Row(
                       children: [
-                        Text('Click Me', style: TextStyle(color: Colors.white)),
+                        Text('NEXT', style: TextStyle(color: Colors.white)),
                       ],
                     ),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.blue,
+                      backgroundColor: Colors.blue,
                       shape: RoundedRectangleBorder(
                         borderRadius:
                             BorderRadius.circular(5.0), // Rounded rectangle
