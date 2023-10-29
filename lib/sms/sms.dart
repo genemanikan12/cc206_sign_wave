@@ -38,7 +38,7 @@ class sms extends StatelessWidget {
                       child: Icon(
                         Icons.send,
                         color: Colors.white,
-                        size: 40, // Adjust the size as neededaaaaa
+                        size: 40, // Adjust the size as needed
                       ),
                     ),
                   ),
