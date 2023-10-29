@@ -10,9 +10,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Demo');
 
-      home: const sms(),
-      );
   }
 }

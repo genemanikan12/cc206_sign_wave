@@ -51,10 +51,3 @@ class sms extends StatelessWidget {
     );
   }
 }
-
-void main() {
-  runApp(MaterialApp(
-    home: sms(),
-  ));
-}
-//hello
