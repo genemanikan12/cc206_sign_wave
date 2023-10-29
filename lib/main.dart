@@ -27,6 +27,3 @@ class MainApp extends StatelessWidget {
 
 
 //fuck you
-//omsimmmm
-//omsim123
-//haha tite
