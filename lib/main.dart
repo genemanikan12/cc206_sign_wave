@@ -22,9 +22,8 @@ class MainApp extends StatelessWidget {
             ColorScheme.fromSeed(seedColor: Color.fromARGB(115, 31, 31, 31)),
         useMaterial3: true,
       ),
-
       navigatorKey: navigatorKey,
-      initialRoute: '/lessons', 
+      initialRoute: '/lessons',
       routes: {
         '/exercise': (context) => Exercise(),
         '/lessons': (context) => Lessons(),
