@@ -1,3 +1,4 @@
+import 'package:cc206_sign_wave/components/home_drawer.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -50,10 +51,19 @@ class _LessonsState extends State<Lessons> {
           style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
-        leading: BackButton(
-          color: Colors.white,
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(Icons.menu),
+              color: Colors.white,
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+            );
+          },
         ),
       ),
+      drawer: MyDrawer(),
       body: LessonPage(),
       bottomNavigationBar: BottomNavigationBar(
         items: [

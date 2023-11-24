@@ -1,3 +1,4 @@
+import 'package:cc206_sign_wave/components/home_drawer.dart';
 import 'package:flutter/material.dart';
 
 class Sms extends StatelessWidget {
@@ -33,6 +34,7 @@ class Sms extends StatelessWidget {
         ],
         iconTheme: IconThemeData(color: Colors.white),
       ),
+      drawer: MyDrawer(), // Use the drawer here
       backgroundColor: Colors.grey[850],
       body: ChatScreen(),
       bottomNavigationBar: DefaultTextStyle(
