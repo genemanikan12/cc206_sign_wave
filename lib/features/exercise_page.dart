@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cc206_sign_wave/components/home_drawer.dart';
 
 enum ProductTypeEnum { Option1, Option2 }
 
@@ -35,7 +36,18 @@ class _ExerciseState extends State<Exercise> {
             style: TextStyle(color: Colors.white, fontFamily: 'Lato'),
           ),
         ),
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.menu),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+            );
+          },
+        ),
       ),
+      drawer: MyDrawer(),
       backgroundColor: Colors.grey[850],
       body: Column(
         children: [
@@ -46,10 +58,11 @@ class _ExerciseState extends State<Exercise> {
               child: Text(
                 'Progress:',
                 style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.normal,
-                    color: Colors.white,
-                    fontFamily: 'Lato'),
+                  fontSize: 15,
+                  fontWeight: FontWeight.normal,
+                  color: Colors.white,
+                  fontFamily: 'Lato',
+                ),
               ),
             ),
           ),
