@@ -11,16 +11,14 @@ class Exercise extends StatefulWidget {
 
 class _ExerciseState extends State<Exercise> {
   ProductTypeEnum? _productTypeEnum;
-  double _progressValue = 0.5; // Initial progress value
+  double _progressValue = 0.5;
 
-  // Function to select an option when tapped
   void _selectOption(ProductTypeEnum option) {
     setState(() {
       _productTypeEnum = option;
     });
   }
 
-  // Function to check if an option is selected
   bool _isOptionSelected(ProductTypeEnum option) {
     return _productTypeEnum == option;
   }
@@ -29,20 +27,29 @@ class _ExerciseState extends State<Exercise> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('Lesson 1 - Hello and Welcome')),
+        backgroundColor: Colors.grey[900],
+        iconTheme: IconThemeData(color: Colors.white),
+        title: Center(
+          child: Text(
+            'Lesson 1 - Hello and Welcome',
+            style: TextStyle(color: Colors.white, fontFamily: 'Lato'),
+          ),
+        ),
       ),
+      backgroundColor: Colors.grey[850],
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 50),
+            padding: const EdgeInsets.only(left: 50, top: 50),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 'Progress:',
                 style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.normal,
-                ),
+                    fontSize: 15,
+                    fontWeight: FontWeight.normal,
+                    color: Colors.white,
+                    fontFamily: 'Lato'),
               ),
             ),
           ),
@@ -65,6 +72,8 @@ class _ExerciseState extends State<Exercise> {
                   style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
+                    fontFamily: 'Lato',
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -80,6 +89,8 @@ class _ExerciseState extends State<Exercise> {
                   style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.normal,
+                    fontFamily: 'Lato',
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -157,14 +168,15 @@ class _ExerciseState extends State<Exercise> {
                     },
                     child: Row(
                       children: [
-                        Text('NEXT', style: TextStyle(color: Colors.white)),
+                        Text('NEXT',
+                            style: TextStyle(
+                                color: Colors.white, fontFamily: 'Lato')),
                       ],
                     ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue,
                       shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(5.0), // Rounded rectangle
+                        borderRadius: BorderRadius.circular(5.0),
                       ),
                     ),
                   ),
@@ -174,6 +186,46 @@ class _ExerciseState extends State<Exercise> {
           ),
         ],
       ),
+      bottomNavigationBar: DefaultTextStyle(
+        style: TextStyle(
+          fontFamily: 'Lato',
+        ),
+        child: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.book, color: Colors.blue),
+              label: 'Lessons',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.fitness_center, color: Colors.blue),
+              label: 'Exercises',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.chat, color: Colors.blue),
+              label: 'Chat',
+            ),
+          ],
+          currentIndex: 1,
+          onTap: (index) => _onBottomNavItemTapped(index, context),
+          backgroundColor: Colors.grey[900],
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.white,
+        ),
+      ),
     );
+  }
+
+  void _onBottomNavItemTapped(int index, BuildContext context) {
+    switch (index) {
+      case 0:
+        Navigator.pushNamed(context, '/lessons');
+        break;
+      case 1:
+        print("Already on the Exercise Page");
+        break;
+      case 2:
+        Navigator.pushNamed(context, '/chat');
+        break;
+    }
   }
 }
