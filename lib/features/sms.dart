@@ -210,3 +210,4 @@ class ChatMessage extends StatelessWidget {
     );
   }
 }
+//this should be on zapanta-villarde branch
