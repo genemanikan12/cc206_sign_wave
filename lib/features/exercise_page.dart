@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cc206_sign_wave/components/home_drawer.dart';
+import 'package:image_picker/image_picker.dart';
 
 enum ProductTypeEnum { Option1, Option2 }
 
@@ -13,6 +14,7 @@ class Exercise extends StatefulWidget {
 class _ExerciseState extends State<Exercise> {
   ProductTypeEnum? _productTypeEnum;
   double _progressValue = 0.5;
+  final picker = ImagePicker();
 
   void _selectOption(ProductTypeEnum option) {
     setState(() {
@@ -167,10 +169,36 @@ class _ExerciseState extends State<Exercise> {
             alignment: Alignment.bottomRight,
             child: Padding(
               padding: const EdgeInsets.only(
-                  right: 50, top: 15, left: 50, bottom: 25),
+                  right: 55, top: 15, left: 50, bottom: 25),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  ElevatedButton(
+                    onPressed: () async {
+                      final pickedFile =
+                          await picker.pickImage(source: ImageSource.camera);
+
+                      if (pickedFile != null) {
+                        print("Image captured: ${pickedFile.path}");
+                      } else {
+                        print("No image selected");
+                      }
+                    },
+                    child: Row(
+                      children: [
+                        Text('Use Camera',
+                            style: TextStyle(
+                                color: Colors.white, fontFamily: 'Lato')),
+                      ],
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.grey[900],
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 75),
                   ElevatedButton(
                     onPressed: () {
                       if (_productTypeEnum != null) {
