@@ -160,7 +160,7 @@ class Lesson extends StatelessWidget {
       rightIcon = GestureDetector(
         onTap: () {},
         child: Container(
-          padding: EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(10.0),
           decoration: BoxDecoration(
             color: Colors.blue,
             borderRadius: BorderRadius.circular(12.0),
@@ -168,7 +168,7 @@ class Lesson extends StatelessWidget {
           child: Icon(
             Icons.arrow_forward,
             color: Colors.white,
-            size: 32.0,
+            size: 25.0,
           ),
         ),
       );

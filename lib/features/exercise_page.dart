@@ -52,7 +52,7 @@ class _ExerciseState extends State<Exercise> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 50, top: 50),
+            padding: const EdgeInsets.only(left: 50, top: 10),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -77,7 +77,7 @@ class _ExerciseState extends State<Exercise> {
           ),
           Center(
             child: Padding(
-              padding: const EdgeInsets.only(left: 0, bottom: 15),
+              padding: const EdgeInsets.only(left: 0, bottom: 0),
               child: Align(
                 alignment: Alignment.center,
                 child: Text(
@@ -128,8 +128,8 @@ class _ExerciseState extends State<Exercise> {
                   borderRadius: BorderRadius.circular(14.0),
                   child: Image.network(
                     'https://st4.depositphotos.com/1010613/22025/i/450/depositphotos_220253218-stock-photo-close-woman-hands-using-sign.jpg',
-                    height: 200,
-                    width: 350,
+                    height: 150,
+                    width: 280,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -138,7 +138,7 @@ class _ExerciseState extends State<Exercise> {
           ),
           Padding(
             padding:
-                const EdgeInsets.only(top: 15, bottom: 30, left: 15, right: 15),
+                const EdgeInsets.only(top: 15, bottom: 25, left: 15, right: 15),
             child: InkWell(
               onTap: () => _selectOption(ProductTypeEnum.Option2),
               child: Container(
@@ -155,8 +155,8 @@ class _ExerciseState extends State<Exercise> {
                   borderRadius: BorderRadius.circular(14.0),
                   child: Image.network(
                     'https://st4.depositphotos.com/1010613/21960/i/450/depositphotos_219609530-stock-photo-close-woman-hands-using-sign.jpg',
-                    height: 200,
-                    width: 350,
+                    height: 150,
+                    width: 280,
                     fit: BoxFit.cover,
                   ),
                 ),
